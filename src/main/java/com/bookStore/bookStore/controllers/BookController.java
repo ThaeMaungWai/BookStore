@@ -35,9 +35,6 @@ private BookService service;
     @GetMapping("/available_books")
     public ModelAndView getAllBook() {
         List<Book> list=service.getAllBook();
-//		ModelAndView m=new ModelAndView();
-//		m.setViewName("bookList");
-//		m.addObject("book",list);
         return new ModelAndView("bookList","book",list);
     }
 
